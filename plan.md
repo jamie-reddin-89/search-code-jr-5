@@ -123,7 +123,7 @@
 - ✅ Session/activity tracking ready for integration
 - ✅ All user management functions operational
 - ✅ AdminUsers page completely rewritten with new features
-- ✅ Version updated to 1.5.4
+- ✅ Version updated to 1.5.7
 
 ---
 
