@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+import * as React from "react";
+const { useState, useEffect } = React;
+
 interface ErrorCode {
   code: string;
   meaning: string;
