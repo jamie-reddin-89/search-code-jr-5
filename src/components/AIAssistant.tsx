@@ -1,4 +1,6 @@
 import { useState } from "react";
+import * as React from "react";
+const { useState } = React;
 import { Bot, Send, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
