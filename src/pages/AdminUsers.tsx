@@ -134,6 +134,7 @@ export default function AdminUsers() {
           {!selectedUser && <div className="text-sm text-muted-foreground">Select a user</div>}
           {selectedUser && (
             <div className="space-y-3">
+              <div><span className="font-medium">Username:</span> <span className="font-bold">{selectedUser.username || selectedUser.email || selectedUser.id.slice(0,8)}</span></div>
               <div><span className="font-medium">ID:</span> {selectedUser.id}</div>
               <div><span className="font-medium">Device:</span> {selectedUser.deviceId}</div>
               <div><span className="font-medium">Location:</span> {selectedUser.city || "-"}</div>
