@@ -1,4 +1,6 @@
 import { useMemo, useState } from "react";
+import * as React from "react";
+const { useMemo, useState } = React;
 import { Link } from "react-router-dom";
 import { Home, ArrowLeft, BarChart3 } from "lucide-react";
 import TopRightControls from "@/components/TopRightControls";
