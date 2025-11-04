@@ -17,7 +17,6 @@ import { Input } from "./ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import ContactForm from '@/components/ContactForm';
-import { CONTACT_EMAIL } from '@/lib/config';
 
 export const Settings = () => {
   const [offlineMode, setOfflineMode] = useState(
@@ -152,7 +151,12 @@ export const Settings = () => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[700px]">
         <DialogHeader>
-          <DialogTitle>Settings</DialogTitle>
+          <div className="flex items-center justify-between">
+            <DialogTitle>Settings</DialogTitle>
+            <div className="flex gap-2">
+              <ContactForm />
+            </div>
+          </div>
         </DialogHeader>
         <Tabs defaultValue="general" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
@@ -260,19 +264,8 @@ export const Settings = () => {
             <div className="space-y-2 text-sm">
               <p>
                 <span className="font-medium">Created by:</span>{" "}
-                <a href="https://jayreddin.github.io" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jamie Reddin</a>
+                <a href="https://jayreddin.github.io" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jamie Reddin</a>, Version: 1.8.6
               </p>
-              <p>
-                <span className="font-medium">Version:</span> 1.8.5
-              </p>
-
-              <p>
-                <span className="font-medium">Contact:</span> <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">{CONTACT_EMAIL}</a>
-              </p>
-
-              <div className="flex gap-2">
-                <ContactForm />
-              </div>
             </div>
           </TabsContent>
         </Tabs>
